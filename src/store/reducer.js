@@ -9,15 +9,14 @@ const defaultState = {
 //export the function returned a newState to store 
 export default (state = defaultState,action)=>{
     const type = action.type;
-    // const newState = JSON.parse(JSON.stringify(state));//deep copy
-    const newState = Object.assign(state);
+    const newState = JSON.parse(JSON.stringify(state));//deep copy
     //4--change state and return newState
     switch(type){
         case actionTypes.CHANGE_INPUT_VALUE:
             newState.inputValue = action.value;
             return newState;
         case actionTypes.SUBMIT_INPUT_VALUE:
-            newState.list.push(state.inputValue);
+            newState.list.push(newState.inputValue);
             newState.inputValue = '';
             return newState;
         case actionTypes.DEL_LIST_ITEM:
