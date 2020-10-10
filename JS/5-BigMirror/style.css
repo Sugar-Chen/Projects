@@ -1,0 +1,36 @@
+.smallPngContainer {
+    width: 450px;
+    height: 450px;
+    border: 1px solid seashell;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.shadow {
+    width: 260px;
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: move;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    display: none;
+}
+
+.bigPngContainer {
+    width: 600px;
+    height: 600px;
+    border: 1px solid seashell;
+    overflow: hidden;
+    display: none;
+    position: relative;
+}
+
+.bigImgDiv {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

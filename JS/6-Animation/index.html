@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation封装</title>
+    <style>
+        .moveBox {
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class='moveBox'>box</div>
+    <script>
+       window.addEventListener('load', function() {
+           var moveBox = document.querySelector('.moveBox');
+           slowAnimation(moveBox, 400);
+       });
+
+	   // 匀速动画
+       function animation(moveEle, targetDistance) {
+		   clearInterval(moveEle.timer);
+			moveEle.timer = setInterval(function () {
+				var offLeft = moveEle.offsetLeft;
+				if (offLeft >= targetDistance) {
+					clearInterval(moveEle.timer);
+				}
+				moveEle.style.left = offLeft + 2 + 'px';
+			}, 30);
+	   }
+	   
+	   // 缓动动画
+	   function slowAnimation(moveEle, targetDistance) {
+		   clearInterval(moveEle.timer);
+			moveEle.timer = setInterval(function () {
+				var offLeft = moveEle.offsetLeft;
+				var step = (targetDistance - offLeft) / 10;
+				step = step > 0 ? Math.ceil(step) : Math.floor(step);
+				if (offLeft >= targetDistance) {
+					clearInterval(moveEle.timer);
+				}
+				moveEle.style.left = offLeft + step + 'px';
+			}, 15);
+	   }
+    </script>
+</body>
+</html>

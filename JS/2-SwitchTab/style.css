@@ -1,0 +1,51 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+header {
+    height: 88px;
+    background-color: azure;
+    line-height: 88px;
+    color: #666666;
+    text-align: center;
+}
+.banner {
+    height: 300px;
+    background-color: beige;
+    line-height: 300px;
+    text-align: center;
+    color: #999999;
+}
+.tabContainer {
+    height: 360px;
+    background-color: aliceblue;
+}
+.tabContainer .tabs {
+    font-size: 0;
+}
+.tabContainer .tabs li {
+    font-size: 16px;
+    margin: 0 10px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 0;
+}
+.tabsDesc {
+    padding: 10px;
+}
+.highLight {
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+.show {
+    display: inline;
+}
+.hide {
+    display: none;
+}
+footer {
+    line-height: 120px;
+    background-color: darkgrey;
+    color: #eeeeee;
+    text-align: center;
+}

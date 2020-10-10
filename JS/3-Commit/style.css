@@ -1,0 +1,15 @@
+.commitCard {
+    height: 200px;
+}
+textarea {
+    width: 80%;
+    height: 80px;
+}
+.subBtn {
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+}
